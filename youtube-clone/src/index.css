@@ -77,3 +77,25 @@ code {
 .container-snap::-webkit-scrollbar {
     display: none;
 }
+@layer utilities {
+    .scrollbar::-webkit-scrollbar {
+      width: 20px;
+    }
+  
+    .scrollbar::-webkit-scrollbar-track {
+      /* border-radius: 100vh; */
+      background: black;
+      
+    }
+  
+    .scrollbar::-webkit-scrollbar-thumb {
+      background: #606060;
+      border-radius: 100vh;
+      height: 100px;
+      border: 6px black solid;
+    }
+  
+    .scrollbar::-webkit-scrollbar-thumb:hover {
+      background: #C0C0C0;
+    }
+  }

@@ -18,7 +18,7 @@ const Header = () => {
   const navigate=useNavigate();
   const searchQueryHandler = (event) =>{
         if((event?.key === "Enter" || event === "searchButton") && searchQuery?.length>0){
-           navigate(`/searchResult/${searchQuery}`);
+           navigate(`/searchResult/${searchQuery}`);          
         }
   }
   const mobileMenuToggle=()=>{
@@ -26,10 +26,11 @@ const Header = () => {
   }
   const {pathname}=useLocation();
   const pageName = pathname?.split("/")?.filter(Boolean)?.[0];
+  console.log(pageName)
   return (
-    <div className="sticky top-0 z-10 flex flex-row items-center justify-between h-14 px-4 md:px-5 bg-black">
+    <div className="sticky top-0 z-10 flex flex-row items-center  justify-between h-14 px-4 md:px-5 bg-black">
     {loading && <Loader/>}
-    <div className="flex h-5 items-center">
+    <div className="flex h-5 items-center mt-1">
         {pageName !=="video" && (
           <div 
           className="flex md:hidden md:mr-6 cursor-pointer items-center justify-center h-10 w-10 rounded-full hover:bg-[#303030]/[0.6]"

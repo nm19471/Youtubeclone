@@ -8,15 +8,14 @@ import { AppContext } from "./context/contextApi";
 import styles from "./index.css"
 const App =()=>{
     return (
-      <div className="flex flex-col h-full"> 
-     
+      <div className="flex flex-col h-full md:overflow-y-auto scrollbar">     
         <AppContext>
             <BrowserRouter>
             <Header/>
             <Routes>
                 <Route path="/" element={<Feed/>}/>
                 <Route path="/searchResult/:searchQuery" element={<SearchResult/>}/>
-                <Route path="/video/:id" element={<VideoDetails/>}/>
+                <Route path="/video/:id" element={<VideoDetails/>} />
             </Routes>         
             </BrowserRouter>
         </AppContext>  
