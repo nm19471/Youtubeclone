@@ -58,8 +58,8 @@ const VideoDetails = () => {
   return (
     <div className='flex justify-center flex-row-h-[calc(100%-56px)] bg-black '>
       <div className='w-full max-w-[1280px] flex flex-col lg:flex-row '>
-        <div className='flex flex-col lg:w-[calc(100%-0px)] xl:w-[calc(100%-350px)] px-2 py-3 lg:py-6 overflow-y-auto overflow-x-hidden'>
-        <div className="h-[200px] md:h-[400px] lg:h-[400px] xl:h-[550px] ml-[-16px] lg:ml-0 mr-[-16px] lg:mr-0">
+        <div className='flex flex-col lg:w-[calc(100%-0px)] xl:w-[calc(100%-0px)] px-2 py-3 lg:py-6 overflow-y-auto overflow-x-hidden'>
+        <div className="h-[200px] md:h-[400px] lg:h-[400px] xl:h-[400px] ml-[-16px] lg:ml-0 mr-[-16px] lg:mr-0">
          <ReactPlayer
            url={`https://www.youtube.com/watch?v=${id}`}
            controls

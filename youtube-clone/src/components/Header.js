@@ -3,6 +3,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 
 import ytLogo from "../images/yt-logo.png";
 import ytLogoMobile from "../images/yt-logo-mobile.png";
+import avtar from '../images/OIP.jpg'
 
 import { SlMenu } from "react-icons/sl";
 import { IoIosSearch } from "react-icons/io";
@@ -26,7 +27,7 @@ const Header = () => {
   }
   const {pathname}=useLocation();
   const pageName = pathname?.split("/")?.filter(Boolean)?.[0];
-  console.log(pageName)
+  // console.log(pageName)
   return (
     <div className="sticky top-0 z-10 flex flex-row items-center  justify-between h-14 px-4 md:px-5 bg-black">
     {loading && <Loader/>}
@@ -87,7 +88,7 @@ const Header = () => {
           </div>
         </div>
         <div className="flex h-8 w-8 overflow-hidden rounded-full md:ml-4">
-            <img src="https://xsgames.co/randomusers/assets/avatars/female/67.jpg" />
+            <img src={avtar} alt=''/>
         </div>
       </div>
     </div>
